@@ -4,7 +4,7 @@
     <!-- PROPERTIES -->
     <property name="layout"
         value="%d{HH:mm:ss.SSS} %-5level [%thread][%logger{0}] %m%n" />
-    <property name="logFile" value="f5-test" />
+    <property name="logFile" value="myproject-test" />
 
     <!-- APPENDERS -->
     <appender name="LOG_FILE"
@@ -28,7 +28,7 @@
     </appender>
 
     <!-- LOGGERS -->
-    <logger name="com.f5.exersice" level="INFO" />
+    <logger name="com.myproject.exersice" level="INFO" />
 
     <logger name="org.springframework" level="INFO" />
 
