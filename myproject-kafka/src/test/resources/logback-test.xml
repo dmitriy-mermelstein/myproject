@@ -4,7 +4,7 @@
     <!-- PROPERTIES -->
     <property name="layout"
         value="%d{HH:mm:ss.SSS} %-5level [%thread][%logger{0}] %m%n" />
-    <property name="logFile" value="f5-kafka-test" />
+    <property name="logFile" value="myproject-kafka-test" />
 
     <!-- APPENDERS -->
     <appender name="LOG_FILE"
