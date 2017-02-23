@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- PROPERTIES -->
+    <property name="layout"
+        value="%d{HH:mm:ss.SSS} %-5level [%thread][%logger{0}] %m%n" />
+    <property name="logFile" value="f5-consumer" />
+
+    <!-- APPENDERS -->
+    <appender name="LOG_FILE"
+        class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${logFile}.log</File>
+        <rollingPolicy
+            class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logFile}.%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${layout}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="LOG_STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${layout}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- LOGGERS -->
+    <logger name="com.f5.exersice" level="DEBUG" />
+
+    <logger name="com.f5.exersice" level="INFO" />
+
+    <root level="INFO">
+        <appender-ref ref="LOG_FILE" />
+        <appender-ref ref="LOG_STDOUT" />
+    </root>
+
+</configuration>

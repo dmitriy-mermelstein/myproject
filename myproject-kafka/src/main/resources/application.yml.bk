@@ -1,0 +1,7 @@
+kafka:
+  bootstrap:
+    servers: localhost:9092
+   topic: 
+   		- f5sensor.data
+   		- f5sensor.test
+ 
