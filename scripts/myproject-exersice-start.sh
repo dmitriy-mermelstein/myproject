@@ -9,12 +9,12 @@ export KAFKA_HEAP_OPTS="-Xmx256M -Xms128M"
 sudo bin/kafka-server-start.sh config/server.properties
 echo "kafka server started"
 #Start applications
-cd /var/f5
-sudo java -jar f5-consumer.jar &
-echo "f5 consumer started"
-sudo java -jar f5-webserver.jar &
-echo "f5 webserver started"
+cd /var/myproject
+sudo java -jar myproject-consumer.jar &
+echo "myproject consumer started"
+sudo java -jar myproject-webserver.jar &
+echo "myproject webserver started"
 echo -n "Please Wait for 5 seconds and Enter to start the test"
 read
-sudo java -jar f5-test.jar
-echo "f5 test started"
+sudo java -jar myproject-test.jar
+echo "myproject test started"
